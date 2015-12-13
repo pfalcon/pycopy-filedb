@@ -1,7 +1,7 @@
 import os
 import time
 import ujson
-from collections import namedtuple
+from _collections import namedtuple
 
 
 class DB:
