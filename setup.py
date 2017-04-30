@@ -2,7 +2,7 @@ from setuptools import setup
 
 
 setup(name='micropython-filedb',
-      version='0.1.3',
+      version='0.2',
       description="""Very simple, filesystem-based ORM (Object-Relational
 Mapper) for MicroPython.
 """,
