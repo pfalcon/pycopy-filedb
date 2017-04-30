@@ -11,4 +11,4 @@ Mapper) for MicroPython.
       author_email='pfalcon@users.sourceforge.net',
       license='MIT',
       py_modules=['filedb'],
-      install_requires=['micropython-os', 'micropython-time'])
+      install_requires=['micropython-os'])

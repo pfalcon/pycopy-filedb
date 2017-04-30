@@ -1,5 +1,5 @@
 import os
-import time
+import utime
 import ujson
 from ucollections import namedtuple
 
@@ -83,4 +83,6 @@ class Model:
 
 
 def now():
-    return time.strftime("%Y-%m-%d %H:%M:%S")
+    if hasattr(utime, "strftime"):
+        return utime.strftime("%Y-%m-%d %H:%M:%S")
+    return str(int(utime.time()))
