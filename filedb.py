@@ -1,4 +1,4 @@
-import os
+import uos
 import utime
 import ujson
 from ucollections import namedtuple
@@ -34,13 +34,14 @@ class Model:
     def create_table(cls, fail_silently=False):
         cls.__fields__ = list(cls.__schema__.keys())
         cls.Row = namedtuple(cls.__table__, cls.__fields__)
-        try:
-            os.makedirs("%s/%s" % (cls.__db__.name, cls.__table__))
-        except OSError as e:
-            if fail_silently:
-                print(e)
-            else:
-                raise
+        for d in (cls.__db__.name, "%s/%s" % (cls.__db__.name, cls.__table__)):
+            try:
+                uos.mkdir(d)
+            except OSError as e:
+                if fail_silently:
+                    print(e)
+                else:
+                    raise
 
     @classmethod
     def create(cls, **fields):
@@ -77,7 +78,10 @@ class Model:
 
     @classmethod
     def scan(cls):
-        for fname in os.listdir("%s/%s" % (cls.__db__.name, cls.__table__)):
+        for dirent in uos.ilistdir("%s/%s" % (cls.__db__.name, cls.__table__)):
+            fname = dirent[0]
+            if fname[0] == ".":
+                continue
             with open(cls.fname(fname)) as f:
                 yield cls.json2row(ujson.loads(f.read()))
 

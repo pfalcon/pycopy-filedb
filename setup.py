@@ -10,5 +10,4 @@ Mapper) for MicroPython.
       author='Paul Sokolovsky',
       author_email='pfalcon@users.sourceforge.net',
       license='MIT',
-      py_modules=['filedb'],
-      install_requires=['micropython-os'])
+      py_modules=['filedb'])
