@@ -1,4 +1,5 @@
 from setuptools import setup
+import optimize_upip
 
 
 setup(name='micropython-filedb',
@@ -10,4 +11,5 @@ Mapper) for MicroPython.
       author='Paul Sokolovsky',
       author_email='pfalcon@users.sourceforge.net',
       license='MIT',
+      cmdclass={'optimize_upip': optimize_upip.OptimizeUpip},
       py_modules=['filedb'])
