@@ -3,11 +3,11 @@ import optimize_upip
 
 
 setup(name='micropython-filedb',
-      version='0.2.1',
+      version='0.2.2',
       description="""Very simple, filesystem-based ORM (Object-Relational
 Mapper) for MicroPython.
 """,
-      url='https://github.com/pfalcon/filedb',
+      url='https://github.com/pfalcon/micropython-filedb',
       author='Paul Sokolovsky',
       author_email='pfalcon@users.sourceforge.net',
       license='MIT',
