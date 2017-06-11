@@ -86,7 +86,9 @@ class Model:
                 yield cls.json2row(ujson.loads(f.read()))
 
 
-def now():
-    if hasattr(utime, "strftime"):
-        return utime.strftime("%Y-%m-%d %H:%M:%S")
-    return str(int(utime.time()))
+if hasattr(utime, "localtime"):
+    def now():
+        return "%d-%02d-%02d %02d:%02d:%02d" % utime.localtime()[:6]
+else:
+    def now():
+        return str(int(utime.time()))
