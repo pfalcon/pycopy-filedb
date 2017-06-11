@@ -3,7 +3,7 @@ import optimize_upip
 
 
 setup(name='micropython-filedb',
-      version='0.2.2',
+      version='0.3',
       description="""Very simple, filesystem-based ORM (Object-Relational
 Mapper) for MicroPython.
 """,
