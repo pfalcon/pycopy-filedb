@@ -2,12 +2,12 @@ from setuptools import setup
 import optimize_upip
 
 
-setup(name='micropython-filedb',
-      version='0.3',
-      description="""Very simple, filesystem-based ORM (Object-Relational
-Mapper) for MicroPython.
+setup(name='pycopy-filedb',
+      version='0.4',
+      description="""Very simple, filesystem-based ORM (Object-Relational \
+Mapper) for Pycopy (https://github.com/pfalcon/pycopy).
 """,
-      url='https://github.com/pfalcon/micropython-filedb',
+      url='https://github.com/pfalcon/pycopy-filedb',
       author='Paul Sokolovsky',
       author_email='pfalcon@users.sourceforge.net',
       license='MIT',
